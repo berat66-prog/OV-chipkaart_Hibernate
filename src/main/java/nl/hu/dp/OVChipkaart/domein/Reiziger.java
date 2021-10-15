@@ -24,6 +24,10 @@ public class Reiziger {
 
     }
 
+    public void setAdres(Adres adres) {
+        this.adres = adres;
+    }
+
     public List<OVChipkaart> getOVChipkaarten() {
         return OVChipkaarten;
     }
@@ -76,9 +80,9 @@ public class Reiziger {
     public String toString(){
         String s = "";
         if(tussenvoegsel == null){
-            s = s + "Reiziger {#" + reiziger_id + ": " + voorletters + ". "  + achternaam + " " + "(" + geboortedatum + ")} " + adres.toString();
-        }else{
-            s= s + "Reiziger {#" + reiziger_id + ": " + voorletters + ". " + tussenvoegsel + " " + achternaam + " " + "(" + geboortedatum + ")} " + adres.toString();
+            s = s + "Reiziger {#" + reiziger_id + ": " + voorletters + ". "  + achternaam + " " + "(" + geboortedatum + ")} ";
+        }else if(tussenvoegsel != null){
+            s = s + "Reiziger {#" + reiziger_id + ": " + voorletters + ". " + tussenvoegsel + " " + achternaam + " " + "(" + geboortedatum + ")} ";
         }
 
 

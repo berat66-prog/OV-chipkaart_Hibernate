@@ -68,7 +68,7 @@ public class Adres {
 
     public String toString(){
 
-            return " Adres {#" + adres_id + " " + postcode +"-" + huisnummer + "}";
+            return reiziger.toString() + " Adres {#" + adres_id + " " + postcode +"-" + huisnummer + "}";
 
     }
 }

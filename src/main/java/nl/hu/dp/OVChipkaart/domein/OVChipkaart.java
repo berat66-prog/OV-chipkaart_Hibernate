@@ -14,8 +14,9 @@ public class OVChipkaart {
     @ManyToOne
     @JoinColumn(name = "reiziger_id")
     private Reiziger reiziger;
-    @ManyToMany
+
     @JoinTable(name = "ov_chipkaart_product", joinColumns = {@JoinColumn(name = "kaart_nummer")}, inverseJoinColumns = {@JoinColumn(name = "product_nummer")})
+    @ManyToMany
     private List<Product> producten = new ArrayList<>();
 
     public OVChipkaart(){
